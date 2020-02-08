@@ -19,7 +19,7 @@ public class ScientificFunctions {
         return sum;
     }
 
-    public Double subtract(Double a, Double b) {
+    public Double subtract(Double a, passDouble b) {
         Double sum = a - b;
         return sum;
     }
@@ -41,11 +41,12 @@ public class ScientificFunctions {
     }
     // return square root
     public Double squareRoot(Double a) {
-        if(a < 0){
+        if (a < 0) {
             // tell user square root of negative number is not possible
         }
         Double sum = Math.sqrt(a);
         return sum;
+    }
 
     // returns square
     public Double square(Double a) {
@@ -154,6 +155,31 @@ public class ScientificFunctions {
         return number;
 
 }
+    // returns a number of fibonacci numbers based on user input
+    public String fibonacci(Integer input){
+        Integer maxNumber = input;
+        Integer previousNumber = 0;
+        Integer nextNumber = 1;
+        String str = "";
+        for (int i = 1; i <= maxNumber; i++){
+            str += " " + previousNumber;
+            int sum = previousNumber + nextNumber;
+            previousNumber = nextNumber;
+            nextNumber = sum;
+        }
+        return str;
+        }
 
+    public String Hexadecimal(Integer input){
+        return Integer.toHexString(input);
+    }
+
+    public String Octal(Integer input){
+        return Integer.toOctalString(input);
+    }
+
+    public String Binary(Integer input){
+        return Integer.toBinaryString(input);
+    }
 
 }
