@@ -39,12 +39,15 @@ public class ScientificFunctions {
         }
         return null;
     }
-
+    // return square root
     public Double squareRoot(Double a) {
+        if(a < 0){
+            // tell user square root of negative number is not possible
+        }
         Double sum = Math.sqrt(a);
         return sum;
-    }
 
+    // returns square
     public Double square(Double a) {
         Double sum = a*a;
         return sum;
@@ -151,5 +154,6 @@ public class ScientificFunctions {
         return number;
 
 }
+
 
 }
