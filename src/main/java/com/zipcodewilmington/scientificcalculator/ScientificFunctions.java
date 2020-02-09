@@ -165,4 +165,28 @@ public class ScientificFunctions {
         return str;
     }
 
+    public static String getPrimes(Double input){
+        Integer i = 0;
+        Integer number = 0;
+        String  primeNumbers = "";
+
+        for (i = 1; i <= input; i++)
+        {
+            int counter = 0;
+            for(number = i; number >=1; number--)
+            {
+                if(i % number == 0)
+                {
+                    counter = counter + 1;
+                }
+            }
+            if (counter == 2)
+            {
+                primeNumbers = primeNumbers + i + " ";
+            }
+        }
+        return primeNumbers;
+    }
+
+
 }
