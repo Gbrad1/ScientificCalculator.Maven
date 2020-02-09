@@ -19,11 +19,7 @@ public class ScientificFunctions {
         return sum;
     }
 
-<<<<<<< HEAD
-    public Double subtract(Double a, passDouble b) {
-=======
     public static Double subtract(Double a, Double b) {
->>>>>>> a0d3c8bc213b0c9f0525d6b4391d59775f240816
         Double sum = a - b;
         return sum;
     }
@@ -43,26 +39,13 @@ public class ScientificFunctions {
         }
         return null;
     }
-<<<<<<< HEAD
-    // return square root
-    public Double squareRoot(Double a) {
-        if (a < 0) {
-            // tell user square root of negative number is not possible
-        }
-=======
 
     public static Double squareRoot(Double a) {
->>>>>>> a0d3c8bc213b0c9f0525d6b4391d59775f240816
         Double sum = Math.sqrt(a);
         return sum;
     }
 
-<<<<<<< HEAD
-    // returns square
-    public Double square(Double a) {
-=======
     public static Double square(Double a) {
->>>>>>> a0d3c8bc213b0c9f0525d6b4391d59775f240816
         Double sum = a*a;
         return sum;
     }
@@ -167,7 +150,19 @@ public class ScientificFunctions {
         }
         return number;
 
-}
-
+    }
+    public static String fibonacci(Double input){
+        Double maxNumber = input;
+        Integer previousNumber = 0;
+        Integer nextNumber = 1;
+        String str = "";
+        for (int i = 1; i <= maxNumber; i++){
+            str += " " + previousNumber;
+            int sum = previousNumber + nextNumber;
+            previousNumber = nextNumber;
+            nextNumber = sum;
+        }
+        return str;
+    }
 
 }
